@@ -17,7 +17,8 @@
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -206,7 +207,7 @@
 
         <div class="row">        
             <div class="col-md-8">
-
+                <div class="row"></div>
             </div>
             <div class="col-md-4 services-space">
                 <img src="assets/britapopuler.png" class="img-responsive">
@@ -223,10 +224,16 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">Thumbnail Gallery</h1>
+                
+                <div class="row galeri-foto-header">
+                    <div class="col-md-2">
+                        <p class="galeri">GALERI<span class="foto">&nbsp;FOTO&nbsp;</span></p>                    
+                        
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="assets/betterbanyumas.png" alt="">                    
@@ -234,44 +241,44 @@
                 </a>
                 
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="assets/slideshow.png"  alt="">
                     <p>Karesidenan</p>
                 </a>
                 
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="assets/pat.jpg" alt="">
                     <p>Karesidenan</p>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                     <p>Karesidenan</p>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                     <p>Karesidenan</p>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                     <p>Karesidenan</p>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                      <p>Karesidenan</p>                    
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                      <p>Karesidenan</p>
@@ -284,9 +291,46 @@
 
     <section id="footer" class="footer-section">
         <div class="row">
+<!--
             <div class="col-md-12">
                 <img src="assets/footer.png" class="img-responsive">
             </div>
+-->
+            <div class="col-md-5 contact-space">
+                <div class="row">
+                    <div class="col-md-12 contact-header">
+                        Kontak Kami
+                    </div>
+                    <div class="col-md-12 contact-content">
+                        <i class="fa fa-phone">&emsp;(0281)678-788</i><br>
+                        <i class="fa fa-envelope">&emsp;Kecamatan@gov.id</i>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 contact-header">
+                        Website terkait
+                    </div>
+                    <div class="col-md-12 contact-content">
+                        <u><a>Lumbirkec.Banyumaskab.go.id</a><br>
+                        <a>Pekuncenkec.Banyumaskab.go.id</a><br>
+                        <a>Ajibarangkec.Banyumaskab.go.id<a></u>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6 contact-space">
+                 <div class="row">
+                    <div class="col-md-12 contact-header lokasi">
+                        Lokasi
+                    </div>
+                     <div id="map" class="col-md-12">                         
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row copyright"> 
+            <p>Copyright&nbsp;&copy;&nbsp;2016 Kabupaten Banyumas<span>&nbsp;All right reserved</span></p>
         </div>
     </section>
 
@@ -343,8 +387,23 @@
             //responsive code end
         };
     </script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(-7.514669, 109.293804),
+          zoom: 18,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
 
 
 </body>
 
 </html>
+    

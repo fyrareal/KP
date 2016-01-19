@@ -191,21 +191,34 @@ html,body
                                 GALLERY SECTION
 ==========================================================================================
 */
+.galeri-foto-header{
+    margin: 20px 0;
+    font-size: 4em;
+}
+
+.galeri{
+    font-family: 'Dosis';
+    font-weight: 300;
+    color:#3498DB;
+}
+
+.foto{
+    background-color: #3498DB;
+    color:white;
+/*    font-size: 1.5em;*/
+    font-family: 'Dosis';
+    font-weight: 600;
+}
 .gallery-section img {
     width: 100%;
     height: 100%;   
 }
 
 .gallery-section{
-    border-left: 30px solid #5BC6E0;
+    border-left: 30px solid #3498DB;
   
 }
-.gallery-bar {
-    background-color: #5BC6E0;
-    margin-top: 0;
-    padding-top: 0;
-    height: 968px;
-}
+
 
 /*
 ==========================================================================================
@@ -213,15 +226,53 @@ html,body
 ==========================================================================================
 */
 .footer-section {
-    background-color: #002338;
-    padding-top: 45px;
+    background-color: #00324F;
+    
 }
 
+.contact-header{
+    border-style: none;
+    border-bottom: medium solid white;
+    color: white;
+    margin-top: 2.5%;
+    font-size: 1.75em;
+}
+
+.contact-content{
+    color:white;
+    
+}
+
+.contact-space{
+    margin-left: 3%;
+}
 .footer-section img {
     width: 100%;
     height: 100%;
+  
 }
 
+#map{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.copyright{
+    padding: .5% 0;
+    background-color:#002338;
+    text-align: center;
+}
+.copyright p{
+    color:white;
+}
+
+.copyright span{
+    color:#3498DB;
+}
 
 /*
 ==========================================================================================
@@ -370,9 +421,20 @@ html,body
    }
 }
 
+@media only screen and (max-width: 400px) {
+   .galeri-foto-header {
+       font-size: 3em;
+   }
+    .thumb img{
+        height: 200px;
+    }
+
+}
+
+
 /*
 ==========================================================================================
-                                MEDIA QUERY
+                               SLIDER
 ==========================================================================================
 */
 
