@@ -31,6 +31,43 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <script>
+        jssor_1_slider_init = function () {
+
+            var jssor_1_options = {
+                $AutoPlay: true,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 4,
+                    $SpacingX: 4,
+                    $SpacingY: 4,
+                    $Orientation: 2,
+                    $Align: 0
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 810);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
     <header class="nav-down">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -50,19 +87,19 @@
                     <ul class="nav navbar-nav nav-kanan">
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li class="hidden">
-                            <a class="page-scroll" href="#page-top"></a>
+                            <a class="page-scroll nav-hover" href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">Profil</a>
+                            <a class="page-scroll nav-hover" href="#about">Profil</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#berita">Berita</a>
+                            <a class="page-scroll nav-hover" href="#berita">Berita</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#galeri">Galeri</a>
+                            <a class="page-scroll nav-hover" href="#galeri">Galeri</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#footer">Contact</a>
+                            <a class="page-scroll nav-hover" href="#footer">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -73,43 +110,56 @@
     </header>
     <!-- Header Section -->
     <section id="header" class="header-section">
+        
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <img src="assets/logo.png">
+                <div class="row header-row">
+                    <div class="col-md-3 col-sm-2 kop-logo">
+                        <img class="img-responsive" src="assets/logo-pemkab.png">
                     </div>
 
-                    <div class="col-md-8 col-sm-8">
+                    <div class="col-md-9 col-sm-6 kop">
                         <h1>Kecamatan Banyumas</h1>
                         <h2>Kabupaten Banyumas</h2>
-                        <h3>Jl. Raya Banyumas no 31.</h3>
+                        <p>Jl. Raya Banyumas no 31.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="row icon">
-                    
-                    <div class="col-md-2 icon-hover">
-                        <img src="assets/icon_profil.png" class="img-responsive">
-                        <a class="page-scroll" href="#about">Profil</a>
-                    </div>          
-                    <div class="col-md-2 icon-hover">
+
+                    <div class="col-md-2">
+                        <a class="page-scroll" href="#about"><img src="assets/profil.png" class="" onmouseover="hover(this);" onmouseout="unhover(this);"></a>
+                        <!--                        <a class="page-scroll" href="#about">Profil</a>-->
+                    </div>
+                    <div class="col-md-2">
+                        <a class="page-scroll" href="#about"><img src="assets/berita.png" class="" onmouseover="hoverberita(this);" onmouseout="unhoverberita(this);"></a>
+                        <!--
                         <img src="assets/icon_berita.png" class="img-responsive">
                         <a class="page-scroll" href="#berita">Berita</a>
+-->
                     </div>
-                    <div class="col-md-2 icon-hover">
+                    <div class="col-md-2">
+                        <a class="page-scroll" href="#about"><img src="assets/galeri.png" class="" onmouseover="hovergaleri(this);" onmouseout="unhovergaleri(this);"></a>
+                        <!--
                         <img src="assets/icon_galeri.png" class="img-responsive">
                         <a class="page-scroll" href="#galeri">Galeri</a>
+-->
                     </div>
-                    <div class="col-md-2 icon-hover">
+                    <div class="col-md-2 ">
+                        <a class="page-scroll" href="#about"><img src="assets/pelayanan.png" class="" onmouseover="hoverlayanan(this);" onmouseout="unhoverlayanan(this);"></a>
+                        <!--
                         <img src="assets/icon_pelayanan.png" class="img-responsive">
                         <a class="page-scroll" href="#contact">Pelayanan</a>
+-->
                     </div>
-                    <div class="col-md-2 icon-last-hover">
+                    <div class="col-md-2 ">
+                        <a class="page-scroll" href="#about"><img src="assets/kontak.png" class="" onmouseover="hoverkontak(this);" onmouseout="unhoverkontak(this);"></a>
+                        <!--
                         <img src="assets/icon_kontak.png" class="img-responsive">
                         <a class="page-scroll" href="#footer">Kontak</a>
+-->
                     </div>
                 </div>
             </div>
@@ -124,7 +174,7 @@
             <div id="myCarousel" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="active item">
-                        <div class="fill" style="background-image:url('https://placehold.it/1024x700/449955/FFF');">
+                        <div class="fill" style="background-image:url(assets/lumbir_gambar.jpg);">
                             <!--
                             <div class="container">
 
@@ -193,7 +243,8 @@
                 <img src="assets/profpic.png" class="img-responsive">
             </div>
             <div class="col-md-4">
-                <p>&emsp; Tapi saya harus menjelaskan kepada Anda bagaimana semua ini ide keliru atas penolakan kesenangan dan memuji rasa sakit lahir dan saya akan memberikan lebih lengkapnya tentang sistem, dan membabarkan ajaran yang sebenarnya dari penjelajah besar dari kebenaran, master pembangun manusia kebahagiaan. Tidak ada yang menolak, tidak suka, atau menghindari kenikmatan itu sendiri, karena itu adalah kenikmatan, tetapi karena mereka yang tidak tahu bagaimana mengejar kesenangan rasional menghadapi konsekuensi yang sangat menyakitkan. <br>&emsp;Demikian pula, tidak adakah orang yang mencintai atau mengejar atau ingin mengalami penderitaan dari dirinya sendiri, karena rasa sakit, tetapi karena sesekali terjadi keadaan di mana kerja keras dan rasa sakit bisa mendapatkan dia kebahagiaan, kesenangan. Untuk mengambil contoh sederhana, siapakah dari kita yang pernah melakukan latihan fisik berat, selain untuk memperoleh manfaat daripadanya? Tapi siapa yang berhak untuk mencari kesalahan dengan seorang pria yang memilih untuk menikmati kesenangan yang tidak memiliki konsekuensi yang menyebalkan, atau orang yang menghindari penderitaan yang tidak menghasilkan kesenangan?</p>
+                <p>&emsp; Tapi saya harus menjelaskan kepada Anda bagaimana semua ini ide keliru atas penolakan kesenangan dan memuji rasa sakit lahir dan saya akan memberikan lebih lengkapnya tentang sistem, dan membabarkan ajaran yang sebenarnya dari penjelajah besar dari kebenaran, master pembangun manusia kebahagiaan. Tidak ada yang menolak, tidak suka, atau menghindari kenikmatan itu sendiri, karena itu adalah kenikmatan, tetapi karena mereka yang tidak tahu bagaimana mengejar kesenangan rasional menghadapi konsekuensi yang sangat menyakitkan.
+                    <br>&emsp;Demikian pula, tidak adakah orang yang mencintai atau mengejar atau ingin mengalami penderitaan dari dirinya sendiri, karena rasa sakit, tetapi karena sesekali terjadi keadaan di mana kerja keras dan rasa sakit bisa mendapatkan dia kebahagiaan, kesenangan. Untuk mengambil contoh sederhana, siapakah dari kita yang pernah melakukan latihan fisik berat, selain untuk memperoleh manfaat daripadanya? Tapi siapa yang berhak untuk mencari kesalahan dengan seorang pria yang memilih untuk menikmati kesenangan yang tidak memiliki konsekuensi yang menyebalkan, atau orang yang menghindari penderitaan yang tidak menghasilkan kesenangan?</p>
             </div>
 
 
@@ -203,14 +254,149 @@
     </section>
 
     <!-- Services Section -->
-    <section id="berita" class="services-section">
+    <section id="berita" class="berita-section">
 
-        <div class="row">        
+        <div class="row">
             <div class="col-md-8">
-                <div class="row"></div>
+                <p class="judul">BERITA<span class="sub-judul">&nbsp;KECAMATAN&nbsp;</span></p>
+
+
+                <img style="background-color:#00838f; height:15px; width:93%; margin-left:30px; float:left" />
+                <!-- #region Jssor Slider Begin -->
+                <div id="jssor_1" style="position: relative; 
+                                margin: 0 auto; top: 0px; left: 0px; width: 810px; height: 300px; overflow: hidden; visibility: hidden; background-color: #ECF0F1;">
+                    <!-- Loading Screen -->
+                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                        <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                    </div>
+                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
+                        <div data-p="112.50" style="display: none;">
+                            <img data-u="image" src="assets/slideshow.png" />
+                            <div data-u="thumb">
+                                <img class="i" src="assets/slideshow.png" />
+                                <div class="t">Judul Berita</div>
+                                <div class="c">Deskripsi singkat berita yang ditampilkan</div>
+                            </div>
+                        </div>
+                        <div data-p="112.50" style="display: none;">
+                            <img data-u="image" src="assets/slideshow.png" />
+                            <div data-u="thumb">
+                                <img class="i" src="assets/slideshow.png" />
+                                <div class="t">Judul Berita</div>
+                                <div class="c">Deskripsi singkat berita yang ditampilkan</div>
+                            </div>
+                        </div>
+                        <div data-p="112.50" style="display: none;">
+                            <img data-u="image" src="assets/slideshow.png" />
+                            <div data-u="thumb">
+                                <img class="i" src="assets/slideshow.png" />
+                                <div class="t">Judul Berita</div>
+                                <div class="c">Deskripsi singkat berita yang ditampilkan</div>
+                            </div>
+                        </div>
+                        <div data-p="112.50" style="display: none;">
+                            <img data-u="image" src="assets/slideshow.png" />
+                            <div data-u="thumb">
+                                <img class="i" src="assets/slideshow.png" />
+                                <div class="t">Judul Berita</div>
+                                <div class="c">Deskripsi singkat berita yang ditampilkan</div>
+                            </div>
+                        </div>
+                        <div data-p="112.50" style="display: none;">
+                            <img data-u="image" src="assets/slideshow.png" />
+                            <div data-u="thumb">
+                                <img class="i" src="assets/slideshow.png" />
+                                <div class="t">Judul Berita</div>
+                                <div class="c">Deskripsi singkat berita yang ditampilkan</div>
+                            </div>
+                        </div>
+                        <div data-p="112.50" style="display: none;">
+                            <img data-u="image" src="assets/slideshow.png" />
+                            <div data-u="thumb">
+                                <img class="i" src="assets/slideshow.png" />
+                                <div class="t">Judul Berita</div>
+                                <div class="c">Deskripsi singkat berita yang ditampilkan</div>
+                            </div>
+                        </div>
+                        <div data-p="112.50" style="display: none;">
+                            <img data-u="image" src="assets/slideshow.png" />
+                            <div data-u="thumb">
+                                <img class="i" src="assets/slideshow.png" />
+                                <div class="t">Judul Berita</div>
+                                <div class="c">Deskripsi singkat berita yang ditampilkan</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- Thumbnail Navigator -->
+                    <div data-u="thumbnavigator" class="jssort11" style="position:absolute;right:5px;top:0px;font-family:Arial, Helvetica, sans-serif;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:200px;height:300px;" data-autocenter="2">
+                        <!-- Thumbnail Item Skin Begin -->
+                        <div data-u="slides" style="cursor: default;">
+                            <div data-u="prototype" class="p">
+                                <div data-u="thumbnailtemplate" class="tp"></div>
+                            </div>
+                        </div>
+                        <!-- Thumbnail Item Skin End -->
+                    </div>
+                    <!-- Arrow Navigator -->
+                    <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+                    <span data-u="arrowright" class="jssora02r" style="top:0px;right:218px;width:55px;height:55px;" data-autocenter="2"></span>
+
+                </div>
             </div>
-            <div class="col-md-4 services-space">
-                <img src="assets/britapopuler.png" class="img-responsive">
+
+
+            <div class="col-md-4 berita-space list">
+                <p class="judul">BERITA<span class="sub-judul">&nbsp;SKPD&nbsp;</span></p>
+                <ul>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                    <li class="list-berita">
+                        <a href="#"><strong>Beranda sudah buka</strong></br>20 Januari 2016</a>
+                    </li>
+                    <li class="separator-berita">
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -221,77 +407,77 @@
 
         <div class="container">
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-lg-12">
-                
-                <div class="row galeri-foto-header">
-                    <div class="col-md-2">
-                        <p class="galeri">GALERI<span class="foto">&nbsp;FOTO&nbsp;</span></p>                    
-                        
+                <div class="col-lg-12">
+
+                    <div class="row galeri-foto-header">
+                        <div class="col-md-2">
+                            <p class="galeri">GALERI<span class="foto">&nbsp;FOTO&nbsp;</span></p>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="assets/betterbanyumas.png" alt="">                    
-                  <p>Better Banyumas</p>
-                </a>
-                
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="assets/betterbanyumas.png" alt="">
+                        <p>Better Banyumas</p>
+                    </a>
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="assets/slideshow.png" alt="">
+                        <p>Karesidenan</p>
+                    </a>
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="assets/pat.jpg" alt="">
+                        <p>Karesidenan</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        <p>Karesidenan</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        <p>Karesidenan</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        <p>Karesidenan</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        <p>Karesidenan</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        <p>Karesidenan</p>
+                    </a>
+                </div>
+
             </div>
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="assets/slideshow.png"  alt="">
-                    <p>Karesidenan</p>
-                </a>
-                
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="assets/pat.jpg" alt="">
-                    <p>Karesidenan</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                    <p>Karesidenan</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                    <p>Karesidenan</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                    <p>Karesidenan</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                     <p>Karesidenan</p>                    
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                     <p>Karesidenan</p>
-                </a>
-            </div>
-            
-        </div>
 
     </section>
 
     <section id="footer" class="footer-section">
         <div class="row">
-<!--
+            <!--
             <div class="col-md-12">
                 <img src="assets/footer.png" class="img-responsive">
             </div>
@@ -302,9 +488,10 @@
                         Kontak Kami
                     </div>
                     <div class="col-md-12 contact-content">
-                        <i class="fa fa-phone">&emsp;(0281)678-788</i><br>
+                        <i class="fa fa-phone">&emsp;(0281)678-788</i>
+                        <br>
                         <i class="fa fa-envelope">&emsp;Kecamatan@gov.id</i>
-                        
+
                     </div>
                 </div>
                 <div class="row">
@@ -312,7 +499,7 @@
                         Website terkait
                     </div>
                     <div class="col-md-12 contact-content">
-                        <u><a>Lumbirkec.Banyumaskab.go.id</a><br>
+                        <u><a href="http://lumbirkec.banyumaskab.go.id">Lumbirkec.Banyumaskab.go.id</a><br>
                         <a>Pekuncenkec.Banyumaskab.go.id</a><br>
                         <a>Ajibarangkec.Banyumaskab.go.id<a></u>
                     </div>
@@ -320,37 +507,225 @@
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-6 contact-space">
-                 <div class="row">
+                <div class="row">
                     <div class="col-md-12 contact-header lokasi">
                         Lokasi
                     </div>
-                     <div id="map" class="col-md-12">                         
-                     </div>
+                    <div id="map" class="col-md-12">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row copyright"> 
+        <div class="row copyright">
             <p>Copyright&nbsp;&copy;&nbsp;2016 Kabupaten Banyumas<span>&nbsp;All right reserved</span></p>
         </div>
     </section>
 
+    <style>
+        /*  jssor slider arrow navigator skin 02 css 
+        
+        .jssora02l                  (normal)
+        .jssora02r                  (normal)
+        .jssora02l:hover            (normal mouseover)
+        .jssora02r:hover            (normal mouseover)
+        .jssora02l.jssora02ldn      (mousedown)
+        .jssora02r.jssora02rdn      (mousedown) 
+        */
+        /*
+                    .jssora02l,
+                    .jssora02r {
+                        display: block;
+                        position: absolute;
+                         size of arrow element 
+                        width: 55px;
+                        height: 55px;
+                        cursor: pointer;
+                        background: url('img/a02.png') no-repeat;
+                        overflow: hidden;
+                    }
+                    
+                    .jssora02l {
+                        background-position: -3px -33px;
+                    }
+                    
+                    .jssora02r {
+                        background-position: -63px -33px;
+                    }
+                    
+                    .jssora02l:hover {
+                        background-position: -123px -33px;
+                    }
+                    
+                    .jssora02r:hover {
+                        background-position: -183px -33px;
+                    }
+                    
+                    .jssora02l.jssora02ldn {
+                        background-position: -3px -33px;
+                    }
+                    
+                    .jssora02r.jssora02rdn {
+                        background-position: -63px -33px;
+                    }
+*/
+        /* jssor slider thumbnail navigator skin 11 css 
+                     .jssort11 .p            (normal)
+                     .jssort11 .p:hover      (normal mouseover)
+                     .jssort11 .pav          (active)
+                     .jssort11 .pav:hover    (active mouseover)
+                     .jssort11 .pdn          (mousedown)
+                    */
+        
+        .jssort11 .p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 69px;
+            background: #ECF0F1;
+            /* warna thumbnail default*/
+        }
+        
+        .jssort11 .tp {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .jssort11 .i,
+        .jssort11 .pav:hover .i {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 60px;
+            height: 30px;
+            border: white 1px dashed;
+        }
+        
+        * html .jssort11 .i {
+            width/**/
+            : 62px;
+            height/**/
+            : 32px;
+        }
+        
+        .jssort11 .pav .i {
+            border: white 1px solid;
+        }
+        
+        .jssort11 .t,
+        .jssort11 .pav:hover .t {
+            position: absolute;
+            top: 3px;
+            left: 68px;
+            width: 129px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            color: #000;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        
+        .jssort11 .pav .t,
+        .jssort11 .p:hover .t {
+            color: #fff;
+            /* warna font */
+        }
+        
+        .jssort11 .c,
+        .jssort11 .pav:hover .c {
+            position: absolute;
+            top: 38px;
+            left: 3px;
+            width: 197px;
+            height: 31px;
+            line-height: 31px;
+            color: #000;
+            /* warna font default*/
+            font-size: 11px;
+            font-weight: 400;
+            overflow: hidden;
+        }
+        
+        .jssort11 .pav .c,
+        .jssort11 .p:hover .c {
+            color: #fff;
+        }
+        
+        .jssort11 .t,
+        .jssort11 .c {
+            transition: color 0s;
+            -moz-transition: color 0s;
+            -webkit-transition: color 0s;
+            -o-transition: color 0s;
+        }
+        
+        .jssort11 .p:hover .t,
+        .jssort11 .pav:hover .t,
+        .jssort11 .p:hover .c,
+        .jssort11 .pav:hover .c {
+            transition: none;
+            -moz-transition: none;
+            -webkit-transition: none;
+            -o-transition: none;
+        }
+        
+        .jssort11 .p:hover,
+        .jssort11 .pav:hover {
+            background: #00ACC1;
+            /* warna thumnail hover */
+        }
+        
+        .jssort11 .pav,
+        .jssort11 .p.pdn {
+            background: #00838f;
+            /* warna thumnail focused */
+        }
+    </style>
+
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-<!-- Scrolling Nav JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/scrolling-nav.js"></script>
-<script src="js/custom.js">
-</script>
-<script>
-    $('.carousel').carousel();
-    setInterval("$('.jcarousel').jcarousel('scroll', '+=1')", 1000);
-</script>
-<script>
-    jssor_1_slider_init = function () {
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jssor.slider.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/custom.js"></script>
+    <!--
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+
+
+-->
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map');
+            var mapOptions = {
+                center: new google.maps.LatLng(-7.514669, 109.293804),
+                zoom: 18,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(-7.514669, 109.293804),
+                map: map,
+                title: "This is the place."
+            })
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        jQuery(document).ready(function ($) {
 
             var jssor_1_options = {
                 $AutoPlay: true,
@@ -368,6 +743,7 @@
             };
 
             var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizing
             function ScaleSlider() {
@@ -375,35 +751,19 @@
                 if (refSize) {
                     refSize = Math.min(refSize, 810);
                     jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
+                } else {
                     window.setTimeout(ScaleSlider, 30);
                 }
             }
             ScaleSlider();
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
-        };
+        });
     </script>
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(-7.514669, 109.293804),
-          zoom: 18,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
 
 
 </body>
 
 </html>
-    

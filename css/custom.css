@@ -9,17 +9,15 @@ header {
 }
 */
 
-html,body
-{
+html,
+body {
     width: 100%;
-    height: 100%;    
+    height: 100%;
     padding: 0px;
-/*    overflow-x:hidden; */
+    /*    overflow-x:hidden; */
 }
 
-.container{
-    
-}
+.container {}
 
 .nav-down {
     /* top:-40px; */
@@ -34,9 +32,10 @@ html,body
     display: block;
     height: auto;
     width: inherit;
-      margin: 0;
+    margin: 0;
     padding: 0;
 }
+
 
 /*
 ==========================================================================================
@@ -44,31 +43,65 @@ html,body
 ==========================================================================================
 */
 
-.navbar{
+.kop-logo {}
+
+.kop-logo img {
+    margin: 10% 15%;
+    height: 120px;
+    width: 120px;
+}
+
+.kop {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.kop h1 {
+    font-family: 'Dosis';
+    font-weight: 600;
+    color: #3498DB;
+    font-size: 2em;
+}
+
+.kop h2 {
+    font-family: 'Dosis';
+    font-weight: 300;
+    margin-top: 0;
+    color: white;
+    font-size: 1.5em;
+}
+
+.kop p {
+    font-family: 'Dosis';
+    font-weight: 300;
+    margin-top: 0;
+    color: white;
+    font-size: 1.2em;
+}
+
+.navbar {
     background-image: url('../assets/navbar.png');
     background-repeat: no-repeat;
-    
 }
-#header{
+
+#header {
     background-color: #002338;
     border-bottom: 2px;
     border-bottom-color: aqua;
 }
 
-#header h1,h2,h3,a{
-    color: white;
-}
-
-.icon a{
-   
+.icon a {
     margin-left: 30px;
 }
 
-.icon img{    
-    width:100px;
+.icon img {
+    width: 75px;
     height: auto;
-    margin: 20px 0;    
+    margin: 20px 0 0;
 }
+
+
+/*
 .icon-hover div{
     display:inline-block;
     float: right;
@@ -79,10 +112,12 @@ html,body
     border-bottom-color: #2b8cc5;
     width: auto;   
 }
-.icon-last-hover:hover{
+*/
+
+.icon-last-hover:hover {
     border: solid 0.3em #002338;
     border-bottom-color: #2b8cc5;
-    width: auto;   
+    width: 150px;
 }
 
 
@@ -91,38 +126,38 @@ html,body
     margin-left: -20px;    
 }
 */
-.icon-last-hover:hover .page-scroll{
-    font-size: 20px; 
-}
-.icon-hover:hover .page-scroll{
+
+.icon-last-hover:hover .page-scroll {
     font-size: 20px;
 }
 
-
-/*
-.icon-hover img:hover{
-    color:white;
+.icon-hover:hover .page-scroll {
+    font-size: 20px;
+    color: aqua;
 }
 
-.icon-hover a:hover{
-    color:black;
-}
-*/
 
 /*
 ==========================================================================================
-                                NAVBAR
+                                    NAVBAR
 ==========================================================================================
 */
 
-.banner{
+.banner {
     font-size: 4 em;
 }
+
 .nav-kanan{
-    float:right;
+    float: right;    
 }
-.navbar a:hover {
-    background-color: aqua;
+
+.nav-hover a{
+    display: block;    
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #7f8c8d;
+    color: white;
 }
 
 .img-size {
@@ -130,24 +165,26 @@ html,body
     height: 100%;
 }
 
+
 /*
 ==========================================================================================
                                 INTRO SECTION
 ==========================================================================================
 */
+
 .intro-section {
     padding: 0;
     height: 100%;
-    width:auto;
-    background-color: white;
+    width: auto;
+    background-color: black;
 }
+
 
 /*
 ==========================================================================================
                                 ABOUT SECTION
 ==========================================================================================
 */
-
 
 .about-section img {
     /*    margin-top: 45px;*/
@@ -169,21 +206,93 @@ html,body
 
 /*
 ==========================================================================================
-                                SERVICE SECTION
+                                SECTION BERITA
 ==========================================================================================
 */
-.services-section img {
+/*BERITA*/
+.berita-section {
+    border-left: 30px solid #00838F;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.berita-section img {
     width: 100%;
     height: 100%;
 }
 
+.berita-section p{
+    font-size: 3em;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.berita-space p{
+    margin-left: 0 !important;
+    
+}
+
+/*
 #services-bar {
     background-color: #00838F;
     height: 700px;
 }
+*/
 
-.services-space {
-    margin-top: 100px;
+.list{
+    padding-left:0px;
+    padding-right: 30px;
+}
+.list ul {
+    height: 300px;
+    padding-left: 0;
+    padding-right: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    list-style: none;
+}
+
+.list a{
+    color:black;
+    display: block;
+}
+.list li{    
+    margin-top: 0px;
+    text-align: justify;
+}
+
+.list-berita{
+    padding: 10px;
+}
+
+.list-berita a:hover{
+        color:white;
+    text-decoration: none !important;
+}
+.list-berita:hover{
+
+    background-color: #00ACC1;
+    
+}
+.separator-berita{
+    border-style:none;
+    border-bottom: medium    dotted grey;
+    margin-bottom: 10px;
+}
+
+.judul{
+    font-family: 'Dosis';
+    font-weight: 300;
+    color: #00838F;
+    
+}
+
+.sub-judul{
+    background-color: #00838F;
+    color: white;
+    font-family: 'Dosis';
+    font-weight: 600;
+   
 }
 
 /*
@@ -191,32 +300,34 @@ html,body
                                 GALLERY SECTION
 ==========================================================================================
 */
-.galeri-foto-header{
+
+.galeri-foto-header {
     margin: 20px 0;
     font-size: 4em;
 }
 
-.galeri{
+.galeri {
     font-family: 'Dosis';
     font-weight: 300;
-    color:#3498DB;
+    color: #3498DB;
 }
 
-.foto{
+.foto {
     background-color: #3498DB;
-    color:white;
-/*    font-size: 1.5em;*/
+    color: white;
+    /*    font-size: 1.5em;*/
     font-family: 'Dosis';
     font-weight: 600;
 }
+
 .gallery-section img {
     width: 100%;
-    height: 100%;   
+    height: 100%;
 }
 
-.gallery-section{
+.gallery-section {
     border-left: 30px solid #3498DB;
-  
+    padding-top: 50px;
 }
 
 
@@ -225,12 +336,12 @@ html,body
                                 FOOTER SECTION
 ==========================================================================================
 */
+
 .footer-section {
     background-color: #00324F;
-    
 }
 
-.contact-header{
+.contact-header {
     border-style: none;
     border-bottom: medium solid white;
     color: white;
@@ -238,41 +349,41 @@ html,body
     font-size: 1.75em;
 }
 
-.contact-content{
-    color:white;
-    
+.contact-content {
+    color: white;
 }
 
-.contact-space{
+.contact-space {
     margin-left: 3%;
 }
+
 .footer-section img {
     width: 100%;
     height: 100%;
-  
 }
 
-#map{
+#map {
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
     width: 100%;
     height: 300px;
-    
 }
 
-.copyright{
+.copyright {
     padding: .5% 0;
-    background-color:#002338;
+    background-color: #002338;
     text-align: center;
 }
-.copyright p{
-    color:white;
+
+.copyright p {
+    color: white;
 }
 
-.copyright span{
-    color:#3498DB;
+.copyright span {
+    color: #3498DB;
 }
+
 
 /*
 ==========================================================================================
@@ -388,58 +499,79 @@ html,body
 ==========================================================================================
 */
 
-.thumb{
-   
-}
-.thumb img{
-    object-fit:scale-down;
+.thumb {}
+
+.thumb img {
+    object-fit: scale-down;
     width: 500px;
     height: 300px;
 }
-.thumb p{
-    margin:0;
+
+.thumb p {
+    margin: 0;
     color: black;
     text-align: center;
 }
-@media only screen and (max-width: 985px) {
-    .icon{
-        display:none;
+
+@media only screen and (max-width: 980px) {
+    .icon {
+        display: none;
     }
     .about-section img {
-       width: 80%;
-       margin: 5% 10%;
-   }
-   
-   .about-section p {
-       margin: 5% 10% 5%;
-   }
+        width: 80%;
+        margin: 5% 10%;
+    }
+    .about-section p {
+        margin: 5% 10% 5%;
+    }
+    .header-row .col-md-3 {
+        width: 10%;
+    }
+    .header-row .col-md-9 {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header-row {
+        margin-right: 0 !important;
+    }
+    .header-row .col-md-3 {
+        width: 30%;
+        margin-right: 0 !important;
+    }
+    .header-row .col-md-9 {
+        width: 70%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-   .about-section p {
-       text-align: justify;
-   }
+    .about-section p {
+        text-align: justify;
+    }
 }
 
 @media only screen and (max-width: 400px) {
-   .galeri-foto-header {
-       font-size: 3em;
-   }
-    .thumb img{
+    .galeri-foto-header {
+        font-size: 3em;
+    }
+    .thumb img {
         height: 200px;
     }
-
 }
 
 
 /*
 ==========================================================================================
-                               SLIDER
+                               BERITA
 ==========================================================================================
 */
 
-        /* jssor slider arrow navigator skin 02 css */
-        /*
+
+/* jssor slider arrow navigator skin 02 css */
+
+
+/*
         .jssora02l                  (normal)
         .jssora02r                  (normal)
         .jssora02l:hover            (normal mouseover)
@@ -447,23 +579,153 @@ html,body
         .jssora02l.jssora02ldn      (mousedown)
         .jssora02r.jssora02rdn      (mousedown)
         */
-        .jssora02l, .jssora02r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 55px;
-            height: 55px;
-            cursor: pointer;
-            background: url('img/a02.png') no-repeat;
-            overflow: hidden;
-        }
-        .jssora02l { background-position: -3px -33px; }
-        .jssora02r { background-position: -63px -33px; }
-        .jssora02l:hover { background-position: -123px -33px; }
-        .jssora02r:hover { background-position: -183px -33px; }
-        .jssora02l.jssora02ldn { background-position: -3px -33px; }
-        .jssora02r.jssora02rdn { background-position: -63px -33px; }
-/* jssor slider thumbnail navigator skin 11 css *//*.jssort11 .p            (normal).jssort11 .p:hover      (normal mouseover).jssort11 .pav          (active).jssort11 .pav:hover    (active mouseover).jssort11 .pdn          (mousedown)*/.jssort11 .p {    position: absolute;    top: 0;    left: 0;    width: 200px;    height: 69px;    background: #181818;}.jssort11 .tp {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;    border: none;}.jssort11 .i, .jssort11 .pav:hover .i {    position: absolute;    top: 3px;    left: 3px;    width: 60px;    height: 30px;    border: white 1px dashed;}* html .jssort11 .i {    width /**/: 62px;    height /**/: 32px;}.jssort11 .pav .i {    border: white 1px solid;}.jssort11 .t, .jssort11 .pav:hover .t {    position: absolute;    top: 3px;    left: 68px;    width: 129px;    height: 32px;    line-height: 32px;    text-align: center;    color: #fc9835;    font-size: 13px;    font-weight: 700;}.jssort11 .pav .t, .jssort11 .p:hover .t {    color: #fff;}.jssort11 .c, .jssort11 .pav:hover .c {    position: absolute;    top: 38px;    left: 3px;    width: 197px;    height: 31px;    line-height: 31px;    color: #fff;    font-size: 11px;    font-weight: 400;    overflow: hidden;}.jssort11 .pav .c, .jssort11 .p:hover .c {    color: #fc9835;}.jssort11 .t, .jssort11 .c {    transition: color 2s;    -moz-transition: color 2s;    -webkit-transition: color 2s;    -o-transition: color 2s;}.jssort11 .p:hover .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .pav:hover .c {    transition: none;    -moz-transition: none;    -webkit-transition: none;    -o-transition: none;}.jssort11 .p:hover, .jssort11 .pav:hover {    background: #333;}.jssort11 .pav, .jssort11 .p.pdn {    background: #462300;}
+
+.jssora02l,
+.jssora02r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url('img/a02.png') no-repeat;
+    overflow: hidden;
+}
+
+.jssora02l {
+    background-position: -3px -33px;
+}
+
+.jssora02r {
+    background-position: -63px -33px;
+}
+
+.jssora02l:hover {
+    background-position: -123px -33px;
+}
+
+.jssora02r:hover {
+    background-position: -183px -33px;
+}
+
+.jssora02l.jssora02ldn {
+    background-position: -3px -33px;
+}
+
+.jssora02r.jssora02rdn {
+    background-position: -63px -33px;
+}
+
+
+/* jssor slider thumbnail navigator skin 11 css */
+
+
+/*.jssort11 .p            (normal).jssort11 .p:hover      (normal mouseover).jssort11 .pav          (active).jssort11 .pav:hover    (active mouseover).jssort11 .pdn          (mousedown)*/
+
+.jssort11 .p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 69px;
+    background: #181818;
+}
+
+.jssort11 .tp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.jssort11 .i,
+.jssort11 .pav:hover .i {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 60px;
+    height: 30px;
+    border: white 1px dashed;
+}
+
+* html .jssort11 .i {
+    width/**/
+    : 62px;
+    height/**/
+    : 32px;
+}
+
+.jssort11 .pav .i {
+    border: white 1px solid;
+}
+
+.jssort11 .t,
+.jssort11 .pav:hover .t {
+    position: absolute;
+    top: 3px;
+    left: 68px;
+    width: 129px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fc9835;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.jssort11 .pav .t,
+.jssort11 .p:hover .t {
+    color: #fff;
+}
+
+.jssort11 .c,
+.jssort11 .pav:hover .c {
+    position: absolute;
+    top: 38px;
+    left: 3px;
+    width: 197px;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.jssort11 .pav .c,
+.jssort11 .p:hover .c {
+    color: #fc9835;
+}
+
+.jssort11 .t,
+.jssort11 .c {
+    transition: color 2s;
+    -moz-transition: color 2s;
+    -webkit-transition: color 2s;
+    -o-transition: color 2s;
+}
+
+.jssort11 .p:hover .t,
+.jssort11 .pav:hover .t,
+.jssort11 .p:hover .c,
+.jssort11 .pav:hover .c {
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.jssort11 .p:hover,
+.jssort11 .pav:hover {
+    background: #333;
+}
+
+.jssort11 .pav,
+.jssort11 .p.pdn {
+    background: #462300;
+}
 
 
 /*
@@ -486,7 +748,8 @@ html,body
     width: 100%;
     height: 100%;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
+    background-repeat: no-repeat;
     padding: 0;
     margin: 0;
 }
@@ -500,4 +763,3 @@ html,body
     -o-transition: 0.3s ease-in-out left;
     transition: 0.3s ease-in-out left;
 }
-
