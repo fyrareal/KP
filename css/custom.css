@@ -43,7 +43,11 @@ body {
 ==========================================================================================
 */
 
-.kop-logo {}
+.header-section{
+    border-style: none;
+    border-bottom: 5px solid #fff;
+}
+
 
 .kop-logo img {
     margin: 10% 15%;
@@ -54,6 +58,7 @@ body {
 .kop {
     margin-left: 0;
     padding-left: 0;
+    letter-spacing: 1px;
 }
 
 .kop h1 {
@@ -86,8 +91,7 @@ body {
 
 #header {
     background-color: #002338;
-    border-bottom: 2px;
-    border-bottom-color: aqua;
+  
 }
 
 .icon a {
@@ -143,19 +147,24 @@ body {
 ==========================================================================================
 */
 
+.navbar {
+    width: 100% !important;
+}
+
 .banner {
     font-size: 4 em;
 }
 
-.nav-kanan{
-    float: right;    
+.nav-kanan {
+    float: right;
 }
 
-.nav-hover a{
-    display: block;    
+.nav-hover a {
+    display: block;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
     background-color: #7f8c8d;
     color: white;
 }
@@ -172,11 +181,47 @@ body {
 ==========================================================================================
 */
 
+.large img {
+    width: 100%;
+    height: 500px;
+    object-fit:fill;
+    background-position: left;
+}
+
+.medium img {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+    padding: 0;
+}
+
+.small img {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+    padding: 0;
+}
+
 .intro-section {
     padding: 0;
-    height: 100%;
-    width: auto;
+    margin: 0;
+    margin-right: 30px;
+    height: 500px;
     background-color: black;
+}
+
+.intro-section div {
+    padding: 0;
+}
+
+.intro img {
+    width: 100%;
+    /*    height: ;  */
+    object-fit: contain;
+}
+
+.caption{
+    
 }
 
 
@@ -209,26 +254,51 @@ body {
                                 SECTION BERITA
 ==========================================================================================
 */
+
+
 /*BERITA*/
+
 .berita-section {
-    border-left: 30px solid #00838F;
+    border-left: 20px solid #00838F;
     padding-top: 50px;
     padding-bottom: 100px;
 }
+
 .berita-section img {
     width: 100%;
     height: 100%;
 }
 
-.berita-section p{
+.berita-section p {
     font-size: 3em;
     margin-top: 20px;
     margin-left: 40px;
 }
 
-.berita-space p{
+.berita-space p {
     margin-left: 0 !important;
+}
+.carousel-caption { 
+    height: 70px;
+    text-align: left;
+    width: 100%;
+    padding:10px;
+    background-color:rgb(26,108,181);      
+    background-color:rgba(0,131,143,0.7);
+    color:#fff; 
+    text-shadow:0 -1px 0 #1a6cb5; 
+    position: relative;
+    margin-top: 250px;  
+    margin-right: 120px;
+    float: right;
     
+}
+
+.carousel-caption p{
+    font-size: 1.5em;
+    width: 100%;
+    padding:10px;
+    margin:0;
 }
 
 /*
@@ -238,10 +308,11 @@ body {
 }
 */
 
-.list{
-    padding-left:0px;
+.list {
+    padding-left: 0px;
     padding-right: 30px;
 }
+
 .list ul {
     height: 300px;
     padding-left: 0;
@@ -252,48 +323,48 @@ body {
     list-style: none;
 }
 
-.list a{
-    color:black;
+.list a {
+    color: black;
     display: block;
 }
-.list li{    
+
+.list li {
     margin-top: 0px;
     text-align: justify;
 }
 
-.list-berita{
+.list-berita {
     padding: 10px;
 }
 
-.list-berita a:hover{
-        color:white;
+.list-berita a:hover {
+    color: white;
     text-decoration: none !important;
 }
-.list-berita:hover{
 
+.list-berita:hover {
     background-color: #00ACC1;
-    
 }
-.separator-berita{
-    border-style:none;
-    border-bottom: medium    dotted grey;
+
+.separator-berita {
+    border-style: none;
+    border-bottom: medium dotted grey;
     margin-bottom: 10px;
 }
 
-.judul{
+.judul {
     font-family: 'Dosis';
     font-weight: 300;
     color: #00838F;
-    
 }
 
-.sub-judul{
+.sub-judul {
     background-color: #00838F;
     color: white;
     font-family: 'Dosis';
     font-weight: 600;
-   
 }
+
 
 /*
 ==========================================================================================
@@ -326,7 +397,7 @@ body {
 }
 
 .gallery-section {
-    border-left: 30px solid #3498DB;
+    border-left: 20px solid #3498DB;
     padding-top: 50px;
 }
 
