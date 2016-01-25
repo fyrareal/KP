@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Layanan</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/layanan.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <script>
+        jssor_1_slider_init = function () {
+
+            var jssor_1_options = {
+                $AutoPlay: true,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 4,
+                    $SpacingX: 4,
+                    $SpacingY: 4,
+                    $Orientation: 2,
+                    $Align: 0
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 810);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
+    <header class="nav-down">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll banner" href="#page-top" style="font-size:2em; font-family:dosis; font-weight: 500;">Kecamatan Banyumas</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav nav-kanan">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a class="page-scroll nav-hover" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll nav-hover" href="index.html#about">Profil</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll nav-hover" href="index.html#berita">Berita</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll nav-hover" href="index.html#galeri">Galeri</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll nav-hover" href="index.html#footer">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </header>
+
+    <!-- Header Section -->
+    <section id="header" class="header-section">
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="row header-row">
+                    <div class="col-md-3 col-sm-2 kop-logo">
+                        <img class="img-responsive" src="assets/logo-pemkab.png">
+                    </div>
+
+                    <div class="col-md-9 col-sm-6 kop">
+                        <h1>Kecamatan Banyumas</h1>
+                        <h2>Pemerintah Kabupaten Banyumas</h2>
+                        <p>Jl. Raya Banyumas no 31.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row icon">
+
+                    <div class="col-md-2">
+                        <a class="page-scroll" href="index.html#about"><img src="assets/profil.png" class="" onmouseover="hover(this);" onmouseout="unhover(this);"></a>
+                        <!--                        <a class="page-scroll" href="#about">Profil</a>-->
+                    </div>
+                    <div class="col-md-2">
+                        <a class="page-scroll" href="index.html#berita"><img src="assets/berita.png" class="" onmouseover="hoverberita(this);" onmouseout="unhoverberita(this);"></a>
+                        <!--
+                        <img src="assets/icon_berita.png" class="img-responsive">
+                        <a class="page-scroll" href="#berita">Berita</a>
+-->
+                    </div>
+                    <div class="col-md-2">
+                        <a class="page-scroll" href="index.html#galeri"><img src="assets/galeri.png" class="" onmouseover="hovergaleri(this);" onmouseout="unhovergaleri(this);"></a>
+                        <!--
+                        <img src="assets/icon_galeri.png" class="img-responsive">
+                        <a class="page-scroll" href="#galeri">Galeri</a>
+-->
+                    </div>
+                    <div class="col-md-2 ">
+                        <a class="page-scroll" href="layanan.html"><img src="assets/pelayanan.png" class="" onmouseover="hoverlayanan(this);" onmouseout="unhoverlayanan(this);"></a>
+                        <!--
+                        <img src="assets/icon_pelayanan.png" class="img-responsive">
+                        <a class="page-scroll" href="#contact">Pelayanan</a>
+-->
+                    </div>
+                    <div class="col-md-2 ">
+                        <a class="page-scroll" href="index.html#footer"><img src="assets/kontak.png" class="" onmouseover="hoverkontak(this);" onmouseout="unhoverkontak(this);"></a>
+                        <!--
+                        <img src="assets/icon_kontak.png" class="img-responsive">
+                        <a class="page-scroll" href="#footer">Kontak</a>
+-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="dropdown custom-dropdown">
+
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width:5%; margin:0 45%;">
+                    <span class="caret"></span>
+                </button>
+                <!--                <div class="row dropdown-menu mega-dropdown-menu" style="width:100%;">-->
+                <div class="row dropdown-menu background-db-dropdown" style="width:100%;">
+
+                    <div class="db-dropdown">
+
+                        <ul>
+                            <li><a href="#">Menu 1</a>
+                                <ul>
+                                    <li><a href="#">Submenu</a></li>
+                                    <li><a href="#">Submenu</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Menu 2</a>
+                                <ul>
+                                    <li><a href="#">Submenu</a></li>
+                                    <li><a href="#">Submenu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Menu 3</a></li>
+
+
+                        </ul>
+                    </div>
+                    <!--
+                    <div class="menu-utama"> 
+                    <span>Visi Misi</span>
+                        <div class="db-dropdown-content" style="width:inherit;">
+                            <ul>
+                                <li><a href="#">aaaaaaa</a></li>
+                                <li><a href="#">aaaaaaa</a></li>
+                                <li><a href="#">aaaaaaa</a></li>
+                            </ul>    
+                            
+                        </div>
+                    </div>
+-->
+
+
+                    <!--
+
+                    
+                    <div class="col-md-1">
+                        
+                    </div>
+                    <div class="col-md-3 kolom-awal">
+                    	<ul>
+							<li class="mega-dropdown-header">Dresses</li>
+							<li><a href="#">Unique Features</a></li>
+							<li><a href="#">Image Responsive</a></li>
+							<li><a href="#">Auto Carousel</a></li>
+							<li><a href="#">Newsletter Form</a></li>
+							<li><a href="#">Four columns</a></li>
+							<li class="divider"></li>
+							<li class="mega-dropdown-header">Tops</li>
+							<li><a href="#">Good Typography</a></li>
+
+						</ul>
+
+                    </div>
+                    <div class="col-md-4">Yuhu
+                        
+                    </div>
+
+                    <div class="col-md-4">Yuhu
+                        
+                    </div>
+-->
+
+
+
+                </div>
+            </div>
+
+            <!--
+            <ul>
+
+                <li class="dropdown" style="width:20%; margin: 0 45%;">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><b class="arrow-down"></b></a>
+                    <ul class="dropdown-menu" id="menu1" style="width:1000px; margin-left:-500px">
+                        <li><a href="#">2-level Menu <i class="icon-arrow-right"></i></a>
+                        </li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+-->
+
+        </div>
+    </section>
+
+
+    <!-- Section -->
+    <section id="intro" class="intro-section" style="background-color:white;">
+        <div class="row">
+            <div class="col-md-12" style="">
+                <a href="http://perizinan.banyumaskab.go.id" target="_blank"><img class="panji" src="assets/sipanjimas.png"></a>
+            </div>
+        </div>
+        <div class="row" style="background-color:#fff; padding-top:50px;">
+            <div class="col-md-6">
+                <ul class="ul">
+                    <li><a href="#">Tanda Daftar Industri (TDI)</a></li>
+                    <li><a href="#">Izin Usaha Jasa Konstruksi (IUJK)</a></li>
+                    <li><a href="#">Izin Mendirikan Menara Telekomunikasi</a></li>
+                    <li><a href="#">Izin Usaha Penggilingan Padi, Huller Dan Penyosohan Beras</a></li>
+                    <li><a href="#">Izin Penggunaan Tanah Pemerintah Daerah (IPTPD)</a></li>
+                    <li><a href="#">Izin Lokasi</a></li>
+                    <li><a href="#">Izin Penyelenggaraan Reklame</a></li>
+                    <li><a href="#">Izin Usaha Rekreasi Dan Hiburan Umum</a></li>
+                    <li><a href="#">Izin Usaha Angkutan</a></li>
+                    <li><a href="#">Izin Usaha Hotel Dan Penginapan</a></li>
+                    <li><a href="#">Izin Usaha Industri (IUI)</a></li>
+                    <li><a href="#">Izin Usaha Salon Kecantikan</a></li>
+                    <li><a href="#">Izin Usaha Toko Modern</a></li>
+                    <li><a href="#">Tanda Daftar Gudang (TDG)</a></li>
+                    <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
+                    <li><a href="#">Izin Usaha (Siup dan TDP) Sudah memiliki Izin Gangguan/HO</a></li>
+                    <li><a href="#">Izin Prinsip Penanaman Modal</a></li>
+                    <li><a href="#">Izin Prinsip Perluasan Penanaman Modal</a></li>
+                    <li><a href="#">Izin Prinsip Perubahan Penanaman Modal</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="ul">
+                    <li><a href="#">Izin Prinsip Penggabungan Perusahaan Penanaman Modal</a></li>
+                    <li><a href="#">Izin Usaha Untuk Berbagai Sektor Usaha</a></li>
+                    <li><a href="#">Izin Usaha Perluasan Untuk Berbagai Sektor Usaha</a></li>
+                    <li><a href="#">Izin Usaha Perubahan Untuk Berbagai Sektor Usaha</a></li>
+                    <li><a href="#">Izin Usaha Penggabungan Perusahaan Penanaman Modal</a></li>
+                    <li><a href="#">Izin Usaha Rumah Makan</a></li>
+                    <li><a href="#">Izin Usaha Perdagangan (IUP)</a></li>
+                    <li><a href="#">Tanda Daftar Perusahaan (TDP)</a></li>
+                    <li><a href="#">Izin Mendirikan Bangunan (IMB)</a></li>
+                    <li><a href="#">Izin Gangguan</a></li>
+                    <li><a href="#">Izin Penggunaan Tanah Pemerintah Daerah (IPTPD)</a></li>
+                    <li><a href="#">Izin Usaha Perikanan</a></li>
+                    <li><a href="#">Izin Usaha Peternakan</a></li>
+                    <li><a href="#">Izin Usaha Mendirikan Rumah Sakit Atau Klinik Hewan</a></li>
+                    <li><a href="#">Izin Usaha Toko Obat Hewan/Kios/Pengecer</a></li>
+                    <li><a href="#">Izin Usaha Rumah Pemotongan Hewan Atau Rumah Pemotongan Unggas</a></li>
+                    <li><a href="#">Izin Mendirikan Rumah Sakit (Type C & D)</a></li>
+                    <li><a href="#">Izin Mendirikan Klinik</a></li>
+                    <li><a href="#">Izin Mendirikan Puskesmas</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section id="footer" class="footer-section">
+        <div class="row">
+            <!--
+            <div class="col-md-12">
+                <img src="assets/footer.png" class="img-responsive">
+            </div>
+-->
+            <div class="col-md-5 contact-space">
+                <div class="row">
+                    <div class="col-md-12 contact-header">
+                        Kontak Kami
+                    </div>
+                    <div class="col-md-12 contact-content">
+                        <i class="fa fa-phone">&emsp;(0281)678-788</i>
+                        <br>
+                        <i class="fa fa-envelope">&emsp;Kecamatan@gov.id</i>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 contact-header">
+                        Website terkait
+                    </div>
+                    <div class="col-md-12 contact-content">
+                        <u><a href="http://lumbirkec.banyumaskab.go.id">Lumbirkec.Banyumaskab.go.id</a><br>
+                        <a>Pekuncenkec.Banyumaskab.go.id</a><br>
+                        <a>Ajibarangkec.Banyumaskab.go.id<a></u>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6 contact-space">
+                <div class="row">
+                    <div class="col-md-12 contact-header lokasi">
+                        Lokasi
+                    </div>
+                    <div id="map" class="col-md-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row copyright">
+            <p>Copyright&nbsp;&copy;&nbsp;2016 Kabupaten Banyumas<span>&nbsp;All right reserved</span></p>
+        </div>
+    </section>
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jssor.slider.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/main.js."></script>
+    <!--
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+
+
+-->
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map');
+            var mapOptions = {
+                center: new google.maps.LatLng(-7.514669, 109.293804),
+                zoom: 18,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(-7.514669, 109.293804),
+                map: map,
+                title: "This is the place."
+            })
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+
+</body>
+
+</html>
